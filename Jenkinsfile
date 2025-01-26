@@ -17,5 +17,15 @@ pipeline {
                 }
             }
         }
+        stage('Push docker image to Hub'){
+            steps{
+                script{
+                    withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
+                        bat 'docker login -u puneeth0 -p puni@P4175'
+                    }
+                    bat 'docker push puneeth0/ministry-of-magic'
+                    }
+                }
+            }
     }
 }
