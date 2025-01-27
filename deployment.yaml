@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ministry-of-magic-deployment
+  name: ministry-of-magic
 spec:
   selector:
     matchLabels:
