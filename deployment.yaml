@@ -10,8 +10,8 @@ spec:
   template:
     metadata:
       labels:
-        apps: ministry-of-magic
-    specs:
+        app: ministry-of-magic
+    spec:
       containers:
         - name: ministry-of-magic
           image: puneeth0/ministry-of-magic
