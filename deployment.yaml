@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ministry-of-magic
+spec:
+  selector:
+    matchLabels:
+      app: ministry-of-magic
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        apps: ministry-of-magic
+    specs:
+      containers:
+        - name: ministry-of-magic
+          image: puneeth0/ministry-of-magic
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8084
